@@ -1,0 +1,16 @@
+//inherited config file
+//ctl space to see a list of the settings you can specify
+
+{
+    "extends": "../tsconfig.base", //specifies which config file this one extends- will now use all options in base file plus all additional options added here
+    "compilerOptions": {
+        "removeComments": true
+    },
+    //array of patterns it should match to compile
+    "include": [
+        "./**/*" //tells it to begin in this directory and ** search resurivly through all subdirectories *.ts looks for all files ending in ts- * looks for all of the ts files with other endings too
+
+    ]
+}
+
+//globs specify which file should be compiled
