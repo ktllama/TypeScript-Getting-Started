@@ -4,13 +4,18 @@
 {
     "extends": "../tsconfig.base", //specifies which config file this one extends- will now use all options in base file plus all additional options added here
     "compilerOptions": {
-        "removeComments": true
+        "removeComments": true,
+        "outFile": "../js/app.js"
     },
+    //looks at all of the files that get compiled and directs all of the output to a single file
     //array of patterns it should match to compile
-    "include": [
-        "./**/*" //tells it to begin in this directory and ** search resurivly through all subdirectories *.ts looks for all files ending in ts- * looks for all of the ts files with other endings too
+    "files" : [
+        "./app.ts"
+        //now compiles this file and uses triple slash directive to add dependency files
 
     ]
+    //this is an array of all of the files you want the compiler to compile
+    //going to pass the app.ts file since its the starting point in the app
 }
 
 //globs specify which file should be compiled
